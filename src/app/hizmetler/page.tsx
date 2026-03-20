@@ -7,7 +7,7 @@ export default function HizmetlerPage() {
   return (
     <>
       {/* Hero */}
-      <section className="py-24 lg:py-32 px-6 lg:px-8 max-w-7xl mx-auto">
+      <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <SectionHeading
           label="Hizmetlerimiz"
           title="Sürdürülebilir Tasarım Çözümleri"
@@ -16,12 +16,12 @@ export default function HizmetlerPage() {
       </section>
 
       {/* Services Detail Blocks */}
-      <section className="pb-24 lg:pb-32 px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="space-y-24">
+      <section className="pb-16 sm:pb-24 lg:pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="space-y-16 sm:space-y-24">
           {services.map((service, i) => (
             <FadeIn key={service.id} delay={i * 100}>
               <div
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 items-center ${
                   i % 2 !== 0 ? "lg:direction-rtl" : ""
                 }`}
               >
@@ -43,7 +43,7 @@ export default function HizmetlerPage() {
                       0{service.id}
                     </span>
                   </div>
-                  <h3 className="text-3xl font-light text-verde-dark">{service.title}</h3>
+                  <h3 className="text-2xl sm:text-3xl font-light text-verde-dark">{service.title}</h3>
                   <p className="text-verde-muted mt-4 leading-relaxed">{service.longDescription}</p>
 
                   <ul className="mt-8 space-y-3">
@@ -82,18 +82,18 @@ export default function HizmetlerPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 lg:py-32 bg-verde-dark/[0.03]">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+      <section className="py-16 sm:py-24 lg:py-32 bg-verde-dark/[0.03]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>
-            <h2 className="text-3xl md:text-4xl font-light text-verde-dark">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-verde-dark">
               Projeniz İçin Doğru Çözümü Birlikte Bulalım
             </h2>
-            <p className="text-verde-muted mt-4 max-w-lg mx-auto leading-relaxed">
+            <p className="text-verde-muted mt-4 max-w-lg mx-auto leading-relaxed text-sm sm:text-base">
               Her projenin kendine özgü ihtiyaçları vardır. Sizin için en uygun hizmet paketini belirleyelim.
             </p>
             <Link
               href="/iletisim"
-              className="inline-block mt-8 px-10 py-4 bg-verde-dark text-white text-sm tracking-widest hover:bg-verde-green transition-colors duration-500"
+              className="inline-block mt-6 sm:mt-8 px-8 sm:px-10 py-4 min-h-[44px] bg-verde-dark text-white text-sm tracking-widest hover:bg-verde-green transition-colors duration-500"
             >
               İLETİŞİME GEÇİN
             </Link>

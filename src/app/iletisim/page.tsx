@@ -26,7 +26,7 @@ export default function IletisimPage() {
   return (
     <>
       {/* Hero */}
-      <section className="py-24 lg:py-32 px-6 lg:px-8 max-w-7xl mx-auto">
+      <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <SectionHeading
           label="İletişim"
           title="Birlikte Çalışalım"
@@ -35,12 +35,12 @@ export default function IletisimPage() {
       </section>
 
       {/* Contact Content */}
-      <section className="pb-24 lg:pb-32 px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <section className="pb-16 sm:pb-24 lg:pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16">
           {/* Info */}
           <FadeIn>
             <div>
-              <h3 className="text-2xl font-light text-verde-dark mb-8">İletişim Bilgileri</h3>
+              <h3 className="text-xl sm:text-2xl font-light text-verde-dark mb-6 sm:mb-8">İletişim Bilgileri</h3>
 
               <div className="space-y-8">
                 <div className="flex items-start gap-4">
@@ -103,7 +103,7 @@ export default function IletisimPage() {
 
           {/* Form */}
           <FadeIn delay={200}>
-            <div className="bg-white/80 p-8 lg:p-12">
+            <div className="bg-white/80 p-5 sm:p-8 lg:p-12">
               {submitted ? (
                 <div className="text-center py-12">
                   <div className="w-16 h-16 rounded-full bg-verde-accent/20 mx-auto mb-6 flex items-center justify-center">
@@ -116,7 +116,7 @@ export default function IletisimPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <h3 className="text-2xl font-light text-verde-dark mb-6">Mesaj Gönderin</h3>
+                  <h3 className="text-xl sm:text-2xl font-light text-verde-dark mb-4 sm:mb-6">Mesaj Gönderin</h3>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
@@ -130,7 +130,7 @@ export default function IletisimPage() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-transparent border border-verde-light/30 text-verde-text text-sm focus:outline-none focus:border-verde-accent transition-colors"
+                        className="w-full px-4 py-3 min-h-[44px] bg-transparent border border-verde-light/30 text-verde-text text-sm focus:outline-none focus:border-verde-accent transition-colors"
                       />
                     </div>
                     <div>
@@ -144,7 +144,7 @@ export default function IletisimPage() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-transparent border border-verde-light/30 text-verde-text text-sm focus:outline-none focus:border-verde-accent transition-colors"
+                        className="w-full px-4 py-3 min-h-[44px] bg-transparent border border-verde-light/30 text-verde-text text-sm focus:outline-none focus:border-verde-accent transition-colors"
                       />
                     </div>
                   </div>
@@ -160,7 +160,7 @@ export default function IletisimPage() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-transparent border border-verde-light/30 text-verde-text text-sm focus:outline-none focus:border-verde-accent transition-colors"
+                        className="w-full px-4 py-3 min-h-[44px] bg-transparent border border-verde-light/30 text-verde-text text-sm focus:outline-none focus:border-verde-accent transition-colors"
                       />
                     </div>
                     <div>
@@ -173,7 +173,7 @@ export default function IletisimPage() {
                         value={formData.subject}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-transparent border border-verde-light/30 text-verde-text text-sm focus:outline-none focus:border-verde-accent transition-colors"
+                        className="w-full px-4 py-3 min-h-[44px] bg-transparent border border-verde-light/30 text-verde-text text-sm focus:outline-none focus:border-verde-accent transition-colors"
                       >
                         <option value="">Seçiniz</option>
                         <option value="proje">Yeni Proje</option>
@@ -195,13 +195,13 @@ export default function IletisimPage() {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="w-full px-4 py-3 bg-transparent border border-verde-light/30 text-verde-text text-sm focus:outline-none focus:border-verde-accent transition-colors resize-none"
+                      className="w-full px-4 py-3 min-h-[44px] bg-transparent border border-verde-light/30 text-verde-text text-sm focus:outline-none focus:border-verde-accent transition-colors resize-none"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-4 bg-verde-accent text-white text-sm tracking-widest hover:bg-verde-green transition-colors duration-500"
+                    className="w-full py-4 min-h-[44px] bg-verde-accent text-white text-sm tracking-widest hover:bg-verde-green transition-colors duration-500"
                   >
                     GÖNDER
                   </button>
@@ -213,7 +213,7 @@ export default function IletisimPage() {
       </section>
 
       {/* Map Placeholder */}
-      <section className="h-80 bg-verde-light/15 flex items-center justify-center">
+      <section className="h-56 sm:h-80 bg-verde-light/15 flex items-center justify-center overflow-hidden">
         <div className="text-center">
           <svg className="w-12 h-12 text-verde-green/30 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />

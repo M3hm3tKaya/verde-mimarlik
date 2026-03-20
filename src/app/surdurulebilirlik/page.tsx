@@ -56,7 +56,7 @@ export default function SurdurulebilirlikPage() {
   return (
     <>
       {/* Hero */}
-      <section className="py-24 lg:py-32 px-6 lg:px-8 max-w-7xl mx-auto">
+      <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <SectionHeading
           label="Sürdürülebilirlik"
           title="Geleceği Bugünden İnşa Ediyoruz"
@@ -65,11 +65,11 @@ export default function SurdurulebilirlikPage() {
       </section>
 
       {/* 6 Principles */}
-      <section className="pb-24 lg:pb-32 px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className="pb-16 sm:pb-24 lg:pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {principles.map((principle, i) => (
             <FadeIn key={principle.id} delay={i * 100}>
-              <div className="bg-white/80 p-8 hover:shadow-lg transition-shadow duration-500 h-full">
+              <div className="bg-white/80 p-6 sm:p-8 hover:shadow-lg transition-shadow duration-500 h-full">
                 <div className="w-12 h-12 text-verde-accent mb-6">
                   <svg
                     className="w-full h-full"
@@ -91,22 +91,22 @@ export default function SurdurulebilirlikPage() {
       </section>
 
       {/* Impact Numbers */}
-      <section className="py-24 lg:py-32 bg-verde-dark text-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="py-16 sm:py-24 lg:py-32 bg-verde-dark text-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
-            <div className="text-center mb-16">
+            <div className="text-center mb-10 sm:mb-16">
               <span className="text-xs tracking-[0.3em] uppercase text-verde-accent block mb-3">
                 ETKİMİZ
               </span>
-              <h2 className="text-3xl md:text-5xl font-light">Rakamlarla Sürdürülebilirlik</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-light">Rakamlarla Sürdürülebilirlik</h2>
             </div>
           </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12">
             {impactStats.map((stat, i) => (
               <FadeIn key={stat.label} delay={i * 150}>
                 <div className="text-center">
-                  <div className="text-5xl md:text-7xl font-light text-verde-accent">{stat.value}</div>
+                  <div className="text-4xl sm:text-5xl md:text-7xl font-light text-verde-accent">{stat.value}</div>
                   <div className="text-lg font-light mt-4">{stat.label}</div>
                   <div className="text-sm text-white/50 mt-2">{stat.description}</div>
                 </div>
@@ -117,17 +117,17 @@ export default function SurdurulebilirlikPage() {
       </section>
 
       {/* Certifications */}
-      <section className="py-24 lg:py-32 px-6 lg:px-8 max-w-7xl mx-auto">
+      <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <SectionHeading label="Sertifikalar" title="Yeşil Bina Sertifikaları" center />
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="mt-10 sm:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
           {[
             { name: "LEED", desc: "Leadership in Energy and Environmental Design", level: "Platinum & Gold" },
             { name: "BREEAM", desc: "Building Research Establishment Assessment Method", level: "Excellent" },
             { name: "DGNB", desc: "German Sustainable Building Council", level: "Gold" },
           ].map((cert, i) => (
             <FadeIn key={cert.name} delay={i * 100}>
-              <div className="border border-verde-light/30 p-8 text-center hover:border-verde-accent/50 transition-colors duration-500">
+              <div className="border border-verde-light/30 p-6 sm:p-8 text-center hover:border-verde-accent/50 transition-colors duration-500">
                 <div className="text-3xl font-light text-verde-dark mb-2">{cert.name}</div>
                 <div className="text-xs text-verde-muted mb-4">{cert.desc}</div>
                 <div className="inline-block px-4 py-1 bg-verde-accent/10 text-verde-accent text-sm">

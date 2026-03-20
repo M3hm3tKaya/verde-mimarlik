@@ -26,7 +26,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[70vh] flex items-end overflow-hidden">
+      <section className="relative h-[50vh] sm:h-[60vh] md:h-[70vh] flex items-end overflow-hidden">
         <div
           className="absolute inset-0"
           style={{ backgroundColor: project.color + "30" }}
@@ -49,19 +49,19 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-verde-dark/80 to-transparent" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pb-12 w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 sm:pb-12 w-full">
           <FadeIn>
             <span className="text-xs tracking-widest text-verde-accent uppercase">{project.category}</span>
-            <h1 className="text-4xl md:text-6xl font-light text-white mt-2">{project.title}</h1>
-            <p className="text-white/70 mt-4 max-w-xl text-lg">{project.description}</p>
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-light text-white mt-2">{project.title}</h1>
+            <p className="text-white/70 mt-3 sm:mt-4 max-w-xl text-base sm:text-lg">{project.description}</p>
           </FadeIn>
         </div>
       </section>
 
       {/* Info Bar */}
-      <section className="bg-verde-dark text-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <section className="bg-verde-dark text-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
             {[
               { label: "Konum", value: project.location },
               { label: "Yıl", value: project.year },
@@ -78,11 +78,11 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
       </section>
 
       {/* Description */}
-      <section className="py-24 lg:py-32 px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16">
           <FadeIn>
-            <h2 className="text-3xl md:text-4xl font-light text-verde-dark">Proje Hakkında</h2>
-            <p className="text-verde-muted mt-6 leading-relaxed text-lg">{project.longDescription}</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-verde-dark">Proje Hakkında</h2>
+            <p className="text-verde-muted mt-4 sm:mt-6 leading-relaxed text-base sm:text-lg">{project.longDescription}</p>
           </FadeIn>
 
           <FadeIn delay={200}>
@@ -102,13 +102,13 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
       </section>
 
       {/* Gallery placeholder */}
-      <section className="py-16 px-6 lg:px-8 max-w-7xl mx-auto">
+      <section className="py-10 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <FadeIn>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             {[1, 2, 3, 4].map((i) => (
               <div
                 key={i}
-                className="aspect-[4/3] bg-verde-light/15 flex items-center justify-center"
+                className="aspect-[4/3] bg-verde-light/15 flex items-center justify-center overflow-hidden"
               >
                 <div className="text-center">
                   <svg
@@ -133,14 +133,14 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
       </section>
 
       {/* Sustainability Badges */}
-      <section className="py-16 px-6 lg:px-8 max-w-7xl mx-auto">
+      <section className="py-10 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <FadeIn>
-          <h3 className="text-2xl font-light text-verde-dark mb-8">Sürdürülebilirlik Özellikleri</h3>
-          <div className="flex flex-wrap gap-3">
+          <h3 className="text-xl sm:text-2xl font-light text-verde-dark mb-6 sm:mb-8">Sürdürülebilirlik Özellikleri</h3>
+          <div className="flex flex-wrap gap-2 sm:gap-3">
             {project.sustainability.map((badge) => (
               <span
                 key={badge}
-                className="px-5 py-2 bg-verde-accent/10 text-verde-dark text-sm tracking-wide border border-verde-accent/20"
+                className="px-3 sm:px-5 py-2 bg-verde-accent/10 text-verde-dark text-xs sm:text-sm tracking-wide border border-verde-accent/20"
               >
                 {badge}
               </span>
@@ -150,16 +150,16 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
       </section>
 
       {/* Prev / Next Navigation */}
-      <section className="border-t border-verde-light/20 mt-16">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-2">
+      <section className="border-t border-verde-light/20 mt-10 sm:mt-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2">
             {prev ? (
               <Link
                 href={`/projeler/${prev.slug}`}
-                className="py-12 pr-8 group hover:bg-verde-dark/[0.02] transition-colors"
+                className="py-6 sm:py-12 pr-4 sm:pr-8 group hover:bg-verde-dark/[0.02] transition-colors min-h-[44px] border-b sm:border-b-0 border-verde-light/20"
               >
                 <span className="text-xs tracking-widest text-verde-muted uppercase">Önceki Proje</span>
-                <h4 className="text-lg font-light text-verde-dark mt-1 group-hover:text-verde-accent transition-colors">
+                <h4 className="text-base sm:text-lg font-light text-verde-dark mt-1 group-hover:text-verde-accent transition-colors">
                   {prev.title}
                 </h4>
               </Link>
@@ -169,10 +169,10 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
             {next ? (
               <Link
                 href={`/projeler/${next.slug}`}
-                className="py-12 pl-8 text-right border-l border-verde-light/20 group hover:bg-verde-dark/[0.02] transition-colors"
+                className="py-6 sm:py-12 pl-0 sm:pl-8 text-left sm:text-right sm:border-l border-verde-light/20 group hover:bg-verde-dark/[0.02] transition-colors min-h-[44px]"
               >
                 <span className="text-xs tracking-widest text-verde-muted uppercase">Sonraki Proje</span>
-                <h4 className="text-lg font-light text-verde-dark mt-1 group-hover:text-verde-accent transition-colors">
+                <h4 className="text-base sm:text-lg font-light text-verde-dark mt-1 group-hover:text-verde-accent transition-colors">
                   {next.title}
                 </h4>
               </Link>

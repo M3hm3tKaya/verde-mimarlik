@@ -16,7 +16,7 @@ export default function ProjelerPage() {
   return (
     <>
       {/* Hero */}
-      <section className="py-24 lg:py-32 px-6 lg:px-8 max-w-7xl mx-auto">
+      <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <SectionHeading
           label="Portföy"
           title="Projelerimiz"
@@ -25,15 +25,15 @@ export default function ProjelerPage() {
       </section>
 
       {/* Filter */}
-      <section className="px-6 lg:px-8 max-w-7xl mx-auto pb-8">
+      <section className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto pb-8 overflow-hidden">
         <FadeIn>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-2 sm:gap-3">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
                 className={clsx(
-                  "px-5 py-2 text-sm tracking-wide transition-all duration-300",
+                  "px-4 sm:px-5 py-2.5 text-sm tracking-wide transition-all duration-300 min-h-[44px]",
                   activeCategory === cat
                     ? "bg-verde-dark text-white"
                     : "bg-verde-light/20 text-verde-dark hover:bg-verde-light/40"
@@ -47,8 +47,8 @@ export default function ProjelerPage() {
       </section>
 
       {/* Projects Grid */}
-      <section className="px-6 lg:px-8 max-w-7xl mx-auto pb-24 lg:pb-32">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <section className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto pb-16 sm:pb-24 lg:pb-32">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
           {filteredProjects.map((project, i) => (
             <ProjectCard key={project.id} project={project} index={i} />
           ))}

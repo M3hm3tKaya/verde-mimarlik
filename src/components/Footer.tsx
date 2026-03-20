@@ -3,8 +3,8 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-verde-footer text-white/80">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-1 mb-4">
@@ -30,7 +30,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/60 hover:text-verde-accent transition-colors duration-300"
+                    className="text-sm text-white/60 hover:text-verde-accent transition-colors duration-300 py-1 inline-block min-h-[44px] flex items-center"
                   >
                     {link.label}
                   </Link>
@@ -64,7 +64,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-white/10 mt-8 sm:mt-12 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-white/40">
             &copy; {new Date().getFullYear()} Verde Mimarlık. Tüm hakları saklıdır.
           </p>

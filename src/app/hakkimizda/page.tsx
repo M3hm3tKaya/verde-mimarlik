@@ -21,7 +21,7 @@ export default function HakkimizdaPage() {
   return (
     <>
       {/* Hero */}
-      <section className="py-24 lg:py-32 px-6 lg:px-8 max-w-7xl mx-auto">
+      <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <SectionHeading
           label="Hakkımızda"
           title="Doğaya Saygılı Mimarlığın Öncüsü"
@@ -30,8 +30,8 @@ export default function HakkimizdaPage() {
       </section>
 
       {/* Founder */}
-      <section className="pb-24 lg:pb-32 px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <section className="pb-16 sm:pb-24 lg:pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 items-center">
           <FadeIn>
             <div className="relative aspect-[3/4] bg-verde-light/20 overflow-hidden">
               <div className="absolute inset-0 flex items-center justify-center">
@@ -50,7 +50,7 @@ export default function HakkimizdaPage() {
           <FadeIn delay={200}>
             <div>
               <span className="text-xs tracking-widest text-verde-accent uppercase">Kurucu & Baş Mimar</span>
-              <h2 className="text-3xl md:text-4xl font-light text-verde-dark mt-2">Mimar Elif Verde</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-verde-dark mt-2">Mimar Elif Verde</h2>
               <div className="mt-6 space-y-4 text-verde-muted leading-relaxed">
                 <p>
                   İstanbul Teknik Üniversitesi Mimarlık Fakültesi mezunu Elif Verde, yüksek lisansını MIT&apos;de
@@ -71,14 +71,14 @@ export default function HakkimizdaPage() {
       </section>
 
       {/* Team */}
-      <section className="py-24 lg:py-32 bg-verde-dark/[0.02]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="py-16 sm:py-24 lg:py-32 bg-verde-dark/[0.02]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading label="Ekibimiz" title="Uzman Kadromuz" center />
 
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="mt-10 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {teamMembers.map((member, i) => (
               <FadeIn key={member.name} delay={i * 100}>
-                <div className="bg-white/80 p-8 text-center hover:shadow-lg transition-shadow duration-500">
+                <div className="bg-white/80 p-6 sm:p-8 text-center hover:shadow-lg transition-shadow duration-500">
                   <div className="w-20 h-20 rounded-full bg-verde-light/30 mx-auto mb-6 flex items-center justify-center">
                     <svg className="w-8 h-8 text-verde-green/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -95,14 +95,14 @@ export default function HakkimizdaPage() {
       </section>
 
       {/* Awards */}
-      <section className="py-24 lg:py-32 px-6 lg:px-8 max-w-7xl mx-auto">
+      <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <SectionHeading label="Ödüller" title="Başarılarımız" />
 
-        <div className="mt-16 space-y-0">
+        <div className="mt-10 sm:mt-16 space-y-0">
           {awards.map((award, i) => (
             <FadeIn key={award.title} delay={i * 100}>
-              <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8 py-8 border-b border-verde-light/20">
-                <span className="text-2xl font-light text-verde-accent w-20 shrink-0">{award.year}</span>
+              <div className="flex flex-col md:flex-row md:items-center gap-3 sm:gap-4 md:gap-8 py-6 sm:py-8 border-b border-verde-light/20">
+                <span className="text-xl sm:text-2xl font-light text-verde-accent w-20 shrink-0">{award.year}</span>
                 <div className="flex-1">
                   <h4 className="text-lg font-light text-verde-dark">{award.title}</h4>
                   <p className="text-sm text-verde-muted mt-1">{award.org}</p>
